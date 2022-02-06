@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="post-content row justify-content-center">
+    <div class="col-lg-8">
+        <div class="post-title p-2">
+            <h1>{{ article.title }}</h1>
+        </div>
+        <small class="text-muted">{{ article.author }} on {{ article.date|strftime('%Y-%m-%d') }}</small>
+        <div>
+            Tags:
+            {% for tag in article.tags %}
+                <a class="link-secondary" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> 
+            {% endfor %}
+        </div>
+        <hr class="my-5">
+        <div>
+        {{ article.content }}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,21 @@
+<div id="navigation">
+    <ul class="nav p-2">
+        <li>
+            <a id="logo" href="{{ SITEURL }}">
+                <h2><span class="text-white">SSH</span><span style="color:#adb5bd;">IT</span></h2>
+            </a>
+        </li>
+        {% for title, link in MENUITEMS %}
+            <li class="nav-item">
+                <a class="nav-link link-light text-decoration-underline" href="{{ link }}">{{ title }}</a>
+            </li>
+        {% endfor %}
+        {% if pages %}
+            {% for page in pages %}
+                <li class="nav-item">
+                    <a class="nav-link link-light text-decoration-underline" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+</div>

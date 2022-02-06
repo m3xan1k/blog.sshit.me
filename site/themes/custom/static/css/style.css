@@ -1,0 +1,57 @@
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+.highlight {
+    background-color: #444;
+    color: #fff;
+    padding: 1em;
+}
+
+footer {
+    height: 100px;
+    padding: 1em;
+    background-color: #444;
+    color: #fff;
+    margin-top: auto;
+    text-align: center;
+}
+
+#logo {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+#logo h2 {
+    margin-bottom: 0;
+}
+
+#navigation {
+    color: #fff;
+    background-color: #444;
+    margin-bottom: 3em;
+}
+
+#navigation li {
+    display: flex;
+    align-items: center;
+}
+
+.post-title {
+    color: #fff;
+    background-color: #444;
+}
+
+.post-content a {
+    color: #444;
+}
+
+.tag-link {
+    font-size: 1.5em;
+}

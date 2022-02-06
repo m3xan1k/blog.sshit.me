@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for article in articles_page.object_list %}
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="post-title p-2">
+                    <h3>
+                        <a class="text-white" href="{{ SITEURL }}/{{ article.url }}" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                    </h3>
+                </div>
+                <small class="text-muted">{{ article.author }} on {{ article.date|strftime('%Y-%m-%d') }}</small>
+                <div class="my-3 lead">
+                    {{ article.summary }}
+                </div>
+                <div>
+                    Tags:
+                    {% for tag in article.tags %}
+                        <a class="link-secondary" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> 
+                    {% endfor %}
+                </div>
+                <hr class="mb-5">
+            </div>
+        </div>
+{% endfor %}
+
+{% endblock content %}
