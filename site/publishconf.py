@@ -22,5 +22,5 @@ CSS_FILE = 'style.css'
 
 MENUITEMS = (
     ('Blog', '/index.html'),
-    ('Tags', '/tags'),
+    ('Tags', '/tags.html'),
 )
