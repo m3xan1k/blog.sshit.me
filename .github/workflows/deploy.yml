@@ -31,4 +31,5 @@ jobs:
           username: ${{ secrets.PROD_SERVER_USER }}
           key: ${{ secrets.PROD_SERVER_KEY }}
           source: './site/output/*'
-          target: ~${{ secrets.PROD_SERVER_USER }}/blog/output
+          target: ~${{ secrets.PROD_SERVER_USER }}/blog
+          rm: true
